@@ -16,7 +16,7 @@ function TestimonialSection() {
                <div
                   class="profile_container card-body d-flex justify-content-between flex-wrap gap-3">
                   <div class="profile d-flex  align-items-center gap-3">
-                     <img src={testimonial.image} />
+                     <img src={testimonial.image} alt='testimonial'/>
                      <h5 class="card-title align-items-center">{testimonial.name}</h5>
                   </div>
                   <button class="btn btn-light fw-medium">Read Full Story</button>

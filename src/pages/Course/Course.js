@@ -1,10 +1,10 @@
 import React from 'react'
-import Course from '../../component/Course/Course';
+import CourseContent from '../../component/Course/CoursePage';
 
 function CoursePage() {
   return (
     <div>
-       <Course/>
+       <CourseContent/>
     </div>
   )
 }

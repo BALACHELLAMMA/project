@@ -1,12 +1,10 @@
-.topBanner {
-    background-color: orange;
-}
 
+.topBanner ,
 .login_button{
-    background-color: orange;
+    background-color: var(--orange);
 }
 
-.sign_up_button{
-    background-color: #FFFF;
-}
+/* .sign_up_button{
+    background-color: var(--white);
+} */
 

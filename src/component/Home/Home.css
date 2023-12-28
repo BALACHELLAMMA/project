@@ -1,7 +1,5 @@
-
-
 .explore_courses_button{
-    background-color: orange;
+    background-color: var(--orange);
 }
 
 .img_container{
@@ -20,8 +18,9 @@
     .card-img{
         width: 100px;
     }
+
     .card_container{
-        overflow-x: scroll;
-        flex-wrap: nowrap;
-    }
+        overflow-y: scroll;
+      }
+
 }    

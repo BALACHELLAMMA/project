@@ -9,12 +9,13 @@ import '../../component/Header/HeaderComponent.css'
 
 function HeaderComponent() {
     return (
-            <>
-                <p className="topBanner font-weight-bold text-center text-white">Free Courses 🌟 Sale
+            <div className='bg-light'>
+                <p className="topBanner font-weight-bold text-center text-white p-3">Free Courses 🌟 Sale
                     Ends Soon, Get It Now
                     <img src={strokeImg} />
                 </p>
-                <nav className="navbar container  navbar-expand-lg">
+                <div className='bg-light'>
+                <nav className="navbar container  navbar-expand-lg ">
                     <img className="navbar-brand" src={logo}
                         alt="Skill bridge" />
 
@@ -34,25 +35,25 @@ function HeaderComponent() {
                             <ul
                                 className="navbar-nav justify-content-start flex-grow-3 pe-3">
                                 <li className="nav-item">
-                                    <Link to="/HomePage" className="nav-link">Home</Link>
+                                    <Link to="/Home" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/coursePage" className="nav-link" href="#">Courses</Link>
+                                    <Link to="/Course" className="nav-link" href="#">Courses</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/HomePage" className="nav-link">About Us</Link>
+                                    <Link to='/About' className="nav-link">About Us</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link to="/HomePage" className="nav-link">Pricing</Link>
+                                <Link to='/Pricing' className="nav-link">Pricing</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link to="/HomePage" className="nav-link">Contact Us</Link>
+                                <Link to="/Contact" className="nav-link">Contact Us</Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="login_signup_toggle_container d-flex gap-2">
-                        <button type="button" className="sign_up_button rounded border-0 p-2">Sign up</button>
+                        <button type="button" className="sign_up_button bg-light rounded border-0 p-2">Sign up</button>
                         <button type="button"
                             className="login_button rounded border-0   text-white p-2">Login</button>
                         <button className="navbar-toggler border-0 shadow-none" type="button"
@@ -64,8 +65,8 @@ function HeaderComponent() {
                         </button>
                     </div>
                 </nav>    
-            
-            </>
+                </div>
+            </div>
 
     )
 }

@@ -1,8 +1,15 @@
 .get_started_button
 {
-   background-color: orange;
+    background:var(--orange);
    border-radius: 0px 0px 5px 5px;
+}
 
+.monthly_button{
+    background-color: var(--orange);
+}
+
+.yearly_button{
+    background-color: var(--white);
 }
 
 .available_features_container{
@@ -10,8 +17,8 @@
 }
 
 .plan_type {
-    background-color: #f8efe4;
-    border: 1px solid #f5ddbf;
+    background-color: var(--quarterSpanishWhite);
+    border: 1px solid var(--lightOrange);
 }
 
 .price{

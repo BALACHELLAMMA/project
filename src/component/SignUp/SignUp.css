@@ -28,8 +28,8 @@ body{
 }
 
 .sign_up_submit_button {
-    background-color: orange;
+    background-color: var(--orange);
 }
 .google_sign_up_button {
-    background-color: #F1F1F3;
+    background-color: var(--antiFlashWhite);
 }

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../PricingSection/PricingSection.css'
 import { PricingFeaturesData } from './PricingFeaturesData';
+import ButtonColor from './ButtonColor';
 
 
 function PricingSection() {
+
   const RenderPricingFeatures = PricingFeaturesData.map((feature)=>{
      return(
         <div class="col">
@@ -68,18 +70,14 @@ function PricingSection() {
   return (
     <React.Fragment>
          <div className='container mt-5 mb-5'>
-         <h1>Our pricing</h1>
          <section
-            class="pricing_description d-flex justify-content-md-between justify-content-sm-center row mb-5">
-            <p class="col-md-9">Lorem ipsum dolor sit amet consectetur. Tempus
-               tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim
-               lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat
-               senectus in.</p>
+            className="pricing_description d-flex justify-content-md-center row mb-5">
             <div
-               class="bg-white rounded d-flex gap-1  mt-sm-2 p-2"
+               className='bg-white rounded d-flex gap-1  mt-sm-2 p-2'
                style={{width: "200px"}}>
-               <button class="bg-warning text-white border-0 rounded p-3"><b>Monthly</b></button>
-               <button class="bg-white border-0 rounded p-3"><b>Yearly</b></button>
+               <button class="monthly_button text-white border-0 rounded p-3" 
+              ><b>Monthly</b></button>
+               <button class="yearly_button border-0 rounded p-3"><b>Yearly</b></button>
             </div>
          </section>
          <div className='row row-cols-1 row-cols-md-2 g-4 bg-white rounded p-4'>

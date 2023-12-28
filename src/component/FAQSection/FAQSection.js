@@ -10,20 +10,20 @@ function FAQSection() {
 
     const [showAnswer, setShowAnswer] = useState(false);
     const [selected, setSelected] = useState(openCloseIcons.plusIcon);
-    const [FAQBorder, setFAQBorder] = useState('1');
+   //  const [FAQBorder, setFAQBorder] = useState('1');
 
     function openAnswer(){
         setShowAnswer(!showAnswer);
         showAnswer ? setSelected(openCloseIcons.plusIcon) : setSelected(openCloseIcons.closeIcon);
-        showAnswer ? setFAQBorder('0') : setFAQBorder('1');
+      //   showAnswer ? setFAQBorder('0') : setFAQBorder('1');
     }
 
     const RenderFAQ = FAQList.map((FAQ)=>{
         return(
-            <div className={`FAQ_container card p-1 border-${FAQBorder}`} >
+            <div className='FAQ_container card p-1 border' >
             {/* <div class=" p-3 d-flex flex-column gap-3"> */}
                <div
-                  className="d-flex flex-column  gap-4 rounded align-content-center p-4">
+                  className="d-flex flex-column  gap-4 rounded align-content-center p-2">
                   <div
                      className="d-flex justify-content-between  rounded align-content-center p-2 ">
                      <p className="mt-2 fw-medium">{FAQ.question}</p>

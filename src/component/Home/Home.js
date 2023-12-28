@@ -14,15 +14,15 @@ import '../../component/Home/Home.css'
 
 import { Link } from 'react-router-dom'
 import CourseSection from '../CourseSection/CourseSection'
-import BenefitSection from '../BenefitSection/BenefitSection'
 import TestimonialSection from '../TestimonialSection/TestimonialSection'
 import PricingSection from '../PricingSection/PricingSection'
 import FAQSection from '../FAQSection/FAQSection'
+import BenefitSection from '../BenefitSection/BenefitSection'
 
 
 function Home() {
   return (
-    <div className='bg-light'>
+    <div className=''>
       <section className="hero_section container 
       d-flex flex-column align-items-center justify-content-center">
         <div className="position-relative  p-4">
@@ -49,20 +49,20 @@ function Home() {
 
       <section className="container card_section mt-5">
          <div
-           className="card_container  d-flex  bg-white rounded p-3 row">
-           <div className="img_container col  p-md-4 p-3">
+           className="card_container  d-flex  bg-white rounded p-3 row ">
+           <div className="img_container border col  p-md-4">
              <Link>
                <img src={zapier} alt="zapier" className="card-img"/>
              </Link>
            </div>
-           <div className="img_container col  p-md-4 p-3">
+           <div className="img_container col p-md-4">
              <Link>
-               <img src={spotify} alt="spotify" className="card-img"/>
+               <img src={spotify} alt="spotify" className="card-img" />
              </Link>
            </div>
            <div className="img_container col  p-md-4 p-3">
              <Link>
-               <img src={zoom} alt="zoom" className="card-img"/>
+               <img src={zoom} alt="zoom" className="card-img" />
              </Link>
            </div>
            <div className="img_container col  p-md-4 p-3">
@@ -77,12 +77,12 @@ function Home() {
            </div>
            <div className="img_container col p-md-4 p-3">
              <Link href="#">
-               <img src={notion} alt="notion" className="card-img"/>
+               <img src={notion} alt="notion" className="card-img" />
              </Link>
            </div>
            <div className=" col p-md-4 p-3">
              <Link href="#">
-               <img src={netflix} alt="netflix" className="card-img"/>
+               <img src={netflix} alt="netflix" className="card-img" />
              </Link>
            </div>
          </div>

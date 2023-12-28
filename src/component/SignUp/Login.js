@@ -11,7 +11,7 @@ import googleLogo from '../../assets/img/google_logo.svg'
 
 
 
-function SignUp() {
+function Login() {
     return (
         <div className='bg-light '>
         <div className='hero_section container bg-light mb-5'>
@@ -53,16 +53,10 @@ function SignUp() {
             </section>
             <form
                 className=" col-md-5 border order-first order-md-1 bg-white d-flex flex-column gap-3 p-4 rounded">
-                <span className="h3 text-center"><b>Sign Up</b></span>
+                <span className="h3 text-center"><b>Login</b></span>
                 <p className="create_account text-center">
-                    Create an account to unlock exclusive features.
+                    Welcome back! please login to your account.
                 </p>
-                <div className="form-group">
-                    <label for="exampleInputName"><b>Name</b> </label>
-                    <input type="text" className="form-control p-3"
-                        id="exampleInputName" aria-describedby="emailHelp"
-                        placeholder="Enter name" required />
-                </div>
                 <div className="form-group">
                     <label for="exampleInputEmail"><b>Email</b> </label>
                     <input type="email" className="form-control p-3"
@@ -74,21 +68,24 @@ function SignUp() {
                     <input type="password" className="form-control p-3"
                         id="exampleInputPassword" placeholder="Password" required />
                 </div>
+                <div className="form-group d-flex gap-2 justify-content-end ">
+                    <a href="#" className="forgot_password text-secondary text-decoration-none">forgot password ? </a>
+                </div>
                 <div className="form-group d-flex gap-2">
                     <input type="checkbox" />
-                    <label>I agree with <a href="#" className="terms_of_use ">Terms of Use </a>and <a href="#" className="privacy_policy"> Privacy Policy</a></label>
+                    <label className='text-secondary fw-medium'>Remember me</label>
                 </div>
                 <button type="submit"
-                    className="sign_up_submit_button border-0 rounded w-100 text-white mb-2 p-3">Sign Up</button>
+                    className="sign_up_submit_button border-0 rounded w-100 text-white mb-2 p-3">Login</button>
                 <div className="border-0 border-bottom pb-3 text-center position-relative">
                     <span className="position-absolute top-100 translate-middle bg-white p-2">Or</span>
                 </div>
                 <button type="submit"
                     className="google_sign_up_button border-0 rounded w-100 mt-2 p-3"><img
-                        src={googleLogo} className="pe-3" />Sign Up with Google</button>
+                        src={googleLogo} className="pe-3" />Login Up with Google</button>
                 <div className="form-link">
-                    <p className="text-center">Already have an account?
-                        <a href="index.html" className="text-black"> Login
+                    <p className="text-center">Don't have an account?
+                        <a href="SignUp.js" className="text-black"> Sign Up
                             <img src={loginArrow} alt="login" />
                         </a>
                     </p>
@@ -100,4 +97,4 @@ function SignUp() {
     )
 }
 
-export default SignUp
+export default Login;
