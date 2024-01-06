@@ -13,11 +13,7 @@ import videoImg from '../../assets/img/video_img.svg'
 import '../../component/Home/Home.css'
 
 import { Link } from 'react-router-dom'
-import CourseSection from '../CourseSection/CourseSection'
-import TestimonialSection from '../TestimonialSection/TestimonialSection'
-import PricingSection from '../PricingSection/PricingSection'
-import FAQSection from '../FAQSection/FAQSection'
-import BenefitSection from '../BenefitSection/BenefitSection'
+
 
 
 function Home() {
@@ -91,12 +87,6 @@ function Home() {
       <section className='container'>
        <img src={videoImg} className="w-100"/>
       </section>
-
-      <BenefitSection/>
-      <CourseSection/>
-      <TestimonialSection/>
-      <PricingSection/>
-      <FAQSection/>
     </div>
   )
 }

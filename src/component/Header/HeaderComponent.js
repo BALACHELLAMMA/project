@@ -1,13 +1,21 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from '../../assets/img/Logo.svg'
 import hamburger from '../../assets/img/hamburger.svg'
 import strokeImg from '../../assets/img/stroke.svg'
 
 import '../../component/Header/HeaderComponent.css'
+import { useAuth } from '../../utils/AuthContext';
 
 function HeaderComponent() {
+
+    const navigate = useNavigate()
+    const {user, logoutUser} = useAuth()
+
+    const logoutClick = () => {
+        navigate('/')
+    }
     return (
             <div className='bg-light'>
                 <p className="topBanner font-weight-bold text-center text-white p-3">Free Courses 🌟 Sale
@@ -37,25 +45,20 @@ function HeaderComponent() {
                                 <li className="nav-item">
                                     <Link to="/Home" className="nav-link">Home</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/Course" className="nav-link" href="#">Courses</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to='/About' className="nav-link">About Us</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link to='/Pricing' className="nav-link">Pricing</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link to="/Contact" className="nav-link">Contact Us</Link>
-                                </li>
                             </ul>
                         </div>
                     </div>
                     <div className="login_signup_toggle_container d-flex gap-2">
-                        <button type="button" className="sign_up_button bg-light rounded border-0 p-2">Sign up</button>
-                        <button type="button"
-                            className="login_button rounded border-0   text-white p-2">Login</button>
+                        {user ? (
+                            <button onClick={logoutUser} className='logout_button  rounded border-0 text-white'>Logout</button>
+                        )
+                        :
+                        (
+                         <div>
+                             <Link to='/signup' className="sign_up_button bg-light rounded border-0 p-2 text-decoration-none text-black">Sign up</Link>
+                             <Link to='/' className="login_button rounded border-0   text-white p-2 text-decoration-none">Login</Link>
+                         </div>
+                             )}
                         <button className="navbar-toggler border-0 shadow-none" type="button"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasNavbar"

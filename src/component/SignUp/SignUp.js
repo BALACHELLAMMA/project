@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../../utils/AuthContext'
 import '../SignUp/SignUp.css'
 
 
@@ -12,6 +14,26 @@ import googleLogo from '../../assets/img/google_logo.svg'
 
 
 function SignUp() {
+    const {registerUser} = useAuth()
+    const registerForm = useRef(null)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    
+        const name = registerForm.current.name.value
+        const email = registerForm.current.email.value
+        const password = registerForm.current.password.value
+        // const password2 = registerForm.current.password2.value
+    
+        // if(password1 !== password2){
+        //     alert('Passwords did not match!')
+        //     return 
+        // }
+        
+        const userInfo = {name, email, password}
+    
+        registerUser(userInfo)
+    }
     return (
         <div className='bg-light '>
         <div className='hero_section container bg-light mb-5'>
@@ -51,7 +73,7 @@ function SignUp() {
                         src={forwardArrow} /></button>
                 </div>
             </section>
-            <form
+            <form ref={registerForm} onSubmit={handleSubmit}
                 className=" col-md-5 border order-first order-md-1 bg-white d-flex flex-column gap-3 p-4 rounded">
                 <span className="h3 text-center"><b>Sign Up</b></span>
                 <p className="create_account text-center">
@@ -59,19 +81,19 @@ function SignUp() {
                 </p>
                 <div className="form-group">
                     <label for="exampleInputName"><b>Name</b> </label>
-                    <input type="text" className="form-control p-3"
+                    <input type="text" className="form-control p-3" name="name"
                         id="exampleInputName" aria-describedby="emailHelp"
                         placeholder="Enter name" required />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputEmail"><b>Email</b> </label>
-                    <input type="email" className="form-control p-3"
+                    <input type="email" className="form-control p-3" name="email"
                         id="exampleInputEmail" aria-describedby="emailHelp"
                         placeholder="Enter email" required />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputPassword"><b>Password</b></label>
-                    <input type="password" className="form-control p-3"
+                    <input type="password" className="form-control p-3" name="password"
                         id="exampleInputPassword" placeholder="Password" required />
                 </div>
                 <div className="form-group d-flex gap-2">
@@ -88,9 +110,9 @@ function SignUp() {
                         src={googleLogo} className="pe-3" />Sign Up with Google</button>
                 <div className="form-link">
                     <p className="text-center">Already have an account?
-                        <a href="index.html" className="text-black"> Login
+                        <Link to="/" className="text-black"> Login
                             <img src={loginArrow} alt="login" />
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </form>
