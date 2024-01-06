@@ -1,6 +1,7 @@
 
 .topBanner ,
-.login_button{
+.login_button,
+.logout_button{
     background-color: var(--orange);
 }
 
